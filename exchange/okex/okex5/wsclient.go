@@ -27,8 +27,8 @@ type (
 )
 
 const (
-	WebSocketPublicAddr     = "wss://wsaws.okx.com:8443/ws/v5/public"
-	WebSocketPrivateAddr    = "wss://wsaws.okx.com:8443/ws/v5/private"
+	WebSocketPublicAddr     = "wss://ws.okx.com:8443/ws/v5/public"
+	WebSocketPrivateAddr    = "wss://ws.okx.com:8443/ws/v5/private"
 	WebSocketSimPublicAddr  = "wss://wspap.okx.com:8443/ws/v5/public?brokerId=9999"
 	WebSocketSimPrivateAdrr = "wss://wspap.okx.com:8443/ws/v5/private?brokerId=9999"
 
