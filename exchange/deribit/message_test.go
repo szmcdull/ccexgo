@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/NadiaSama/ccexgo/internal/rpc"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 )
 
 func TestDecode(t *testing.T) {

@@ -3,7 +3,7 @@ package future
 import (
 	"context"
 
-	"github.com/NadiaSama/ccexgo/exchange/huobi"
+	"github.com/szmcdull/ccexgo/exchange/huobi"
 )
 
 type (
@@ -19,7 +19,7 @@ const (
 
 func NewRestClient(key, secret string) *RestClient {
 	return &RestClient{
-		RestClient: huobi.NewRestClient(key, secret, FutureHost),
+		RestClient:      huobi.NewRestClient(key, secret, FutureHost),
 		futureSymbolMap: make(map[string]*FutureSymbol),
 	}
 }

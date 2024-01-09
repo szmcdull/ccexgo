@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
 )
 
 func TestIndex(t *testing.T) {

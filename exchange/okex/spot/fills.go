@@ -4,9 +4,9 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/NadiaSama/ccexgo/exchange/okex"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange/okex"
 )
 
 type (
@@ -29,7 +29,7 @@ const (
 	FillsEndPoint = "/api/spot/v3/fills"
 )
 
-//Fills return okex fills in time descent order
+// Fills return okex fills in time descent order
 func (rc *RestClient) Fills(ctx context.Context, instrumentID, orderID string, before, after, limit string) ([]Fill, error) {
 	values := okex.FillsParam(instrumentID, orderID, before, after, limit)
 

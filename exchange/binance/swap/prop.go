@@ -3,7 +3,7 @@ package swap
 import (
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange"
 )
 
 func (rc *RestClient) Property() exchange.Property {

@@ -8,12 +8,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
 	"github.com/jarcoal/httpmock"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
 )
 
-//TestOrdersNew test OrderNew and parseOrder
+// TestOrdersNew test OrderNew and parseOrder
 func TestOrdersNew(t *testing.T) {
 	httpmock.Activate()
 	defer httpmock.Deactivate()

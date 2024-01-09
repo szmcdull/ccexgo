@@ -1,7 +1,7 @@
 package ftx
 
 import (
-	"github.com/NadiaSama/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange"
 )
 
 type (

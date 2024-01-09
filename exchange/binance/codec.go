@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"strconv"
 
-	"github.com/NadiaSama/ccexgo/internal/rpc"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 	"github.com/tidwall/gjson"
 )
 

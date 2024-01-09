@@ -6,9 +6,9 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/exchange/okex"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange/okex"
 )
 
 type (

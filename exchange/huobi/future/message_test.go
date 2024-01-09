@@ -6,8 +6,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/NadiaSama/ccexgo/exchange/huobi"
-	"github.com/NadiaSama/ccexgo/internal/rpc"
+	"github.com/szmcdull/ccexgo/exchange/huobi"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 )
 
 func TestDecodeTrades(t *testing.T) {

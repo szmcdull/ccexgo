@@ -1,6 +1,6 @@
 package ftx
 
-import "github.com/NadiaSama/ccexgo/exchange"
+import "github.com/szmcdull/ccexgo/exchange"
 
 type (
 	OrderbookGrouped        struct{}

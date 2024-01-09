@@ -4,11 +4,11 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/NadiaSama/ccexgo/exchange/okex"
+	"github.com/szmcdull/ccexgo/exchange/okex"
 
-	"github.com/NadiaSama/ccexgo/exchange"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
 )
 
 type (
@@ -58,7 +58,7 @@ func Init(ctx context.Context) error {
 	return nil
 }
 
-//Symbols return swap symbol
+// Symbols return swap symbol
 func (rc *RestClient) Symbols(ctx context.Context) ([]exchange.SwapSymbol, error) {
 	var oss []OkexSymbol
 

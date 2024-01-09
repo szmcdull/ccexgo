@@ -8,9 +8,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/internal/rpc"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 )
 
 type (
@@ -67,12 +67,12 @@ func (c *Client) Handle(ctx context.Context, notify *rpc.Notify) {
 	}
 }
 
-//Auth is done by client.call
+// Auth is done by client.call
 func (c *Client) Auth(ctx context.Context) error {
 	return nil
 }
 
-//Call genetic method
+// Call genetic method
 func (c *Client) Call(ctx context.Context, method string, params interface{}, dest interface{}, private bool) error {
 	return c.call(ctx, method, params, dest, private)
 }

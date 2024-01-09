@@ -3,8 +3,8 @@ package swap
 import (
 	"context"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/exchange/huobi/future"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange/huobi/future"
 )
 
 type (

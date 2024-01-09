@@ -6,8 +6,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/NadiaSama/ccexgo/exchange/huobi"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange/huobi"
 )
 
 type (
@@ -35,8 +35,8 @@ func NewRestClientWithHost(key, secret, host string) *RestClient {
 	}
 }
 
-//PrivatePostReq send post request to huobi swap api. the request body is generate from req param
-//vai json.Marshal() or Serialize()
+// PrivatePostReq send post request to huobi swap api. the request body is generate from req param
+// vai json.Marshal() or Serialize()
 func (rc *RestClient) PrivatePostReq(ctx context.Context, endPoint string, req interface{}, dst interface{}) error {
 	var (
 		raw []byte

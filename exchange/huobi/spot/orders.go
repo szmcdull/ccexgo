@@ -8,10 +8,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/exchange/huobi"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange/huobi"
 )
 
 type (

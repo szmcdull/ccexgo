@@ -1,7 +1,7 @@
 package spot
 
 import (
-	"github.com/NadiaSama/ccexgo/exchange/huobi"
+	"github.com/szmcdull/ccexgo/exchange/huobi"
 )
 
 type (

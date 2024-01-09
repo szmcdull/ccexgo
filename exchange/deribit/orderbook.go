@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/internal/rpc"
-	"github.com/NadiaSama/ccexgo/misc/tconv"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/internal/rpc"
+	"github.com/szmcdull/ccexgo/misc/tconv"
 )
 
 type (
@@ -93,7 +93,7 @@ func init() {
 	reigisterCB("book", parseNotifyBook)
 }
 
-//NewOrderBookChannel return channel for change of order book
+// NewOrderBookChannel return channel for change of order book
 func NewOrderBookChannel(sym exchange.Symbol) exchange.Channel {
 	return &ChOrderBook{
 		sym: sym,
@@ -104,7 +104,7 @@ func (co *ChOrderBook) String() string {
 	return fmt.Sprintf("book.%s.raw", co.sym.String())
 }
 
-//NewOrderBookSnap return channel for snapshot of orderbook
+// NewOrderBookSnap return channel for snapshot of orderbook
 func NewOrderBookSnapChannel(sym exchange.Symbol, group string, depth int) exchange.Channel {
 	return &ChOrderBookSnap{
 		sym:   sym,

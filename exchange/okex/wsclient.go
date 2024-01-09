@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/internal/rpc"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 )
 
 type (
@@ -37,7 +37,7 @@ func NewWSClient(key, secret, passPhrase string, data chan interface{}) *WSClien
 	return newWSClient(OkexWSAddr, key, secret, passPhrase, data)
 }
 
-//NewTESTWSClient return a wsclient for okex testnet
+// NewTESTWSClient return a wsclient for okex testnet
 func NewTESTWSClient(key, secret, passPhrase string, data chan interface{}) *WSClient {
 	return newWSClient(OkexTESTWSAddr, key, secret, passPhrase, data)
 }
@@ -54,7 +54,7 @@ func newWSClient(addr, key, secret, passPhrase string, data chan interface{}) *W
 	return ret
 }
 
-//Subscribe due to okex api limit subscribe result can not ensure
+// Subscribe due to okex api limit subscribe result can not ensure
 func (ws *WSClient) Subscribe(ctx context.Context, channels ...exchange.Channel) error {
 
 	args := make([]string, len(channels))
@@ -73,7 +73,7 @@ func (ws *WSClient) Subscribe(ctx context.Context, channels ...exchange.Channel)
 	return nil
 }
 
-//UnSubscribe due to okex api limit subscribe result can not ensure
+// UnSubscribe due to okex api limit subscribe result can not ensure
 func (ws *WSClient) UnSubscribe(ctx context.Context, channels ...exchange.Channel) error {
 	args := make([]string, len(channels))
 	for i, c := range channels {
@@ -92,8 +92,8 @@ func (ws *WSClient) UnSubscribe(ctx context.Context, channels ...exchange.Channe
 
 }
 
-//Run start the websocket loop and create a goroutine which
-//will send ping message to okex server periodically
+// Run start the websocket loop and create a goroutine which
+// will send ping message to okex server periodically
 func (ws *WSClient) Run(ctx context.Context) error {
 	if err := ws.WSClient.Run(ctx); err != nil {
 		return err

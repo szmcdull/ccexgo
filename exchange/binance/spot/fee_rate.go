@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/NadiaSama/ccexgo/exchange"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
 )
 
 type (

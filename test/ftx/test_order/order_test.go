@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/exchange/ftx"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange/ftx"
 )
 
 func expectOrder(src chan interface{}) (*exchange.Order, error) {

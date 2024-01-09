@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/exchange/okex"
-	"github.com/NadiaSama/ccexgo/internal/rpc"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange/okex"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 )
 
 type (

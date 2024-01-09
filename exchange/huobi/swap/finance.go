@@ -3,8 +3,8 @@ package swap
 import (
 	"context"
 
-	"github.com/NadiaSama/ccexgo/exchange"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange"
 )
 
 func (rc *RestClient) Finance(ctx context.Context, params *exchange.FinanceReqParam) ([]exchange.Finance, error) {

@@ -1,4 +1,4 @@
-module github.com/NadiaSama/ccexgo
+module github.com/szmcdull/ccexgo
 
 go 1.13
 

@@ -1,8 +1,8 @@
 package precision
 
 import (
-	"github.com/NadiaSama/ccexgo/exchange"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
 )
 
 func RoundAmountFloat(symbol exchange.Symbol, amount float64) float64 {

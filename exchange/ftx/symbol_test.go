@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
 	"github.com/jarcoal/httpmock"
+	"github.com/szmcdull/ccexgo/exchange"
 )
 
 func TestSymbols(t *testing.T) {

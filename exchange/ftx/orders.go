@@ -10,9 +10,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
 )
 
 type (
@@ -183,7 +183,7 @@ func parseOrderInternal(o *Order) (*exchange.Order, error) {
 	return order, nil
 }
 
-//OrderCancel only ID field is required
+// OrderCancel only ID field is required
 func (rc *RestClient) OrderCancel(ctx context.Context, order *exchange.Order) error {
 	endPoint := fmt.Sprintf("%s/%s", orderEndPoint, order.ID.String())
 
@@ -193,7 +193,7 @@ func (rc *RestClient) OrderCancel(ctx context.Context, order *exchange.Order) er
 	return nil
 }
 
-//OrderFetch only ID field is required
+// OrderFetch only ID field is required
 func (rc *RestClient) OrderFetch(ctx context.Context, order *exchange.Order) (*exchange.Order, error) {
 	endPoint := fmt.Sprintf("%s/%s", orderEndPoint, order.ID.String())
 
@@ -204,7 +204,7 @@ func (rc *RestClient) OrderFetch(ctx context.Context, order *exchange.Order) (*e
 	return rc.parseOrder(&resp)
 }
 
-//Orders return open orders
+// Orders return open orders
 func (rc *RestClient) Orders(ctx context.Context, symbol exchange.Symbol) ([]*exchange.Order, error) {
 	var orders []Order
 	var param url.Values

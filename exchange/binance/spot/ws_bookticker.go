@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/NadiaSama/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange"
 	"github.com/tidwall/gjson"
 )
 

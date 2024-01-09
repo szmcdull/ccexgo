@@ -3,7 +3,7 @@ package binance
 import (
 	"time"
 
-	"github.com/NadiaSama/ccexgo/misc/tconv"
+	"github.com/szmcdull/ccexgo/misc/tconv"
 )
 
 func Milli2Time(ts int64) time.Time {

@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/exchange/binance"
-	"github.com/NadiaSama/ccexgo/misc/tconv"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange/binance"
+	"github.com/szmcdull/ccexgo/misc/tconv"
 )
 
 type (
@@ -82,7 +82,7 @@ var (
 	}
 )
 
-//NewAddOrderReq according symbol, side, type
+// NewAddOrderReq according symbol, side, type
 func NewAddOrderReq(symbol string, side string, typ string) *AddOrderReq {
 	req := binance.NewRestReq()
 	req.AddFields("symbol", symbol)

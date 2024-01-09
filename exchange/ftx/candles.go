@@ -8,8 +8,8 @@ import (
 	"sort"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange"
 )
 
 type (
@@ -58,7 +58,7 @@ func (cr *CandleReq) Limit(l int) *CandleReq {
 	return cr
 }
 
-//Candles fetch ftx candles in ascending order
+// Candles fetch ftx candles in ascending order
 func (rc *RestClient) Candles(ctx context.Context, cr *CandleReq) ([]Candle, error) {
 	var ret []Candle
 
@@ -82,7 +82,7 @@ func (rc *RestClient) Candles(ctx context.Context, cr *CandleReq) ([]Candle, err
 	return ret, nil
 }
 
-//Klines fetch klines in reverse orders
+// Klines fetch klines in reverse orders
 func (rc *RestClient) Klines(ctx context.Context, kr *exchange.KlineReq) ([]exchange.Kline, error) {
 	if kr.Symbol == nil {
 		return nil, errors.Errorf("missing symbol")

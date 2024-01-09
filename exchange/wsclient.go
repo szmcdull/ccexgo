@@ -3,7 +3,7 @@ package exchange
 import (
 	"context"
 
-	"github.com/NadiaSama/ccexgo/internal/rpc"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 )
 
 type (

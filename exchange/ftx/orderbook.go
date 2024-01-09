@@ -3,8 +3,8 @@ package ftx
 import (
 	"encoding/json"
 
-	"github.com/NadiaSama/ccexgo/exchange"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange"
 )
 
 type (

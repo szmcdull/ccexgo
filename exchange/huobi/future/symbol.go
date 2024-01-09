@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/exchange/huobi"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange/huobi"
 )
 
 type (
@@ -107,7 +107,7 @@ func (fs *FutureSymbol) String() string {
 	return fmt.Sprintf("%s%s", fs.Index(), fs.SettleTime().Format(timeFmt))
 }
 
-//WSSub return symbol which used by websocket subscribe
+// WSSub return symbol which used by websocket subscribe
 func (fs *FutureSymbol) WSSub() string {
 	return fmt.Sprintf("%s_%s", fs.Index(), TypeString(fs.Type()))
 }

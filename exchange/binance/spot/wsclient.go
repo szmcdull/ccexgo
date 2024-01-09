@@ -1,7 +1,7 @@
 package spot
 
 import (
-	"github.com/NadiaSama/ccexgo/exchange/binance"
+	"github.com/szmcdull/ccexgo/exchange/binance"
 )
 
 type (

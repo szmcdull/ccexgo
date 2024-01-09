@@ -1,9 +1,9 @@
 package delivery
 
 import (
-	"github.com/NadiaSama/ccexgo/exchange/binance"
-	"github.com/NadiaSama/ccexgo/internal/rpc"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange/binance"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 	"github.com/tidwall/gjson"
 )
 

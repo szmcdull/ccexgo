@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/exchange/deribit"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange/deribit"
 )
 
 func TestAll(t *testing.T) {

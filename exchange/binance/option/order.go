@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/exchange/binance"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange/binance"
 )
 
 type (
@@ -121,7 +121,7 @@ func (os OrderStatus) String() string {
 	return ret
 }
 
-//NewPostOrderReq build create order request, the amount and price param will be formatted according to symbol precision
+// NewPostOrderReq build create order request, the amount and price param will be formatted according to symbol precision
 func NewPostOrderReq(symbol string, side string, typ string, amount float64, price float64) (*PostOrdreReq, error) {
 	s, err := ParseSymbol(symbol)
 	if err != nil {
@@ -314,8 +314,8 @@ func (rc *RestClient) FetchOrder(ctx context.Context, order *exchange.Order) (*e
 	return resp.Transfer()
 }
 
-//ParseOrderResp extract orderResp info from order.Raw field
-//the order param must be get via CreateOrder, FetchOrder, CancelOrder
+// ParseOrderResp extract orderResp info from order.Raw field
+// the order param must be get via CreateOrder, FetchOrder, CancelOrder
 func ParseOrderResp(order *exchange.Order) (*OrderResp, error) {
 	if order.Raw == nil {
 		return nil, errors.Errorf("no raw info")

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/NadiaSama/ccexgo/internal/rpc"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 )
 
 type (
@@ -37,7 +37,7 @@ func subRegister(typ reflect.Type, cb handlerMsgCB) {
 	subTyp2CB[typ] = cb
 }
 
-//Handler handle notify message
+// Handler handle notify message
 func (c *Client) Handle(_ context.Context, notify *rpc.Notify) {
 	c.SubMu.Lock()
 	defer c.SubMu.Unlock()

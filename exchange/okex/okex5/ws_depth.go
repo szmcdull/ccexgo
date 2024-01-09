@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/internal/rpc"
 	"github.com/emirpasic/gods/trees/btree"
 	"github.com/emirpasic/gods/utils"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 )
 
 type (
@@ -98,8 +98,8 @@ func parseDepth(data *wsResp) (*rpc.Notify, error) {
 	}, nil
 }
 
-//Push update depth data accoring raw depth data base on the
-//https://www.okex.com/docs-v5/en/#websocket-api-checksum-merging-incremental-data-into-full-data
+// Push update depth data accoring raw depth data base on the
+// https://www.okex.com/docs-v5/en/#websocket-api-checksum-merging-incremental-data-into-full-data
 func (ds *DepthDS) Push(raw *RawDepth) (*Depth, error) {
 	updateBook(ds.asks, raw.Asks)
 	updateBook(ds.bids, raw.Bids)

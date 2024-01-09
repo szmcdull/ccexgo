@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/NadiaSama/ccexgo/exchange/ftx"
+	"github.com/szmcdull/ccexgo/exchange/ftx"
 )
 
 func TestAccountLeverage(t *testing.T) {

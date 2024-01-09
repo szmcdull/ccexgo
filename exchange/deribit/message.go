@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/NadiaSama/ccexgo/internal/rpc"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 )
 
 //deribit message json serizlize

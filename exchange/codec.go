@@ -3,7 +3,7 @@ package exchange
 import (
 	"encoding/json"
 
-	"github.com/NadiaSama/ccexgo/internal/rpc"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 )
 
 type (
@@ -16,7 +16,7 @@ func NewCodeC() *CodeC {
 	return &CodeC{}
 }
 
-//Encode encode req with json.Marshal
+// Encode encode req with json.Marshal
 func (cc *CodeC) Encode(req rpc.Request) ([]byte, error) {
 	return json.Marshal(req.Params())
 }

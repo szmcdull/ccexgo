@@ -3,9 +3,9 @@ package swap
 import (
 	"encoding/json"
 
-	"github.com/NadiaSama/ccexgo/exchange/huobi"
-	"github.com/NadiaSama/ccexgo/internal/rpc"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange/huobi"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 )
 
 type (

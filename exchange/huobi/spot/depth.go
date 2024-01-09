@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
 	"github.com/emirpasic/gods/trees/btree"
 	"github.com/emirpasic/gods/utils"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange"
 )
 
 type (
@@ -80,7 +80,7 @@ func NewMBPDepthDS(symbol exchange.Symbol) *MBPDepthDS {
 	}
 }
 
-//Push add incremental updates into ds, return wether the has have been inited
+// Push add incremental updates into ds, return wether the has have been inited
 func (ds *MBPDepthDS) Push(d *Depth, ts time.Time) (inited bool, err error) {
 	//make sure seqNum is consistent
 	if ds.lastSeqNum != 0 && ds.lastSeqNum != d.PrevSeqNum {
@@ -120,8 +120,8 @@ func (ds *MBPDepthDS) AddRefresh(d *Depth) {
 	ds.init()
 }
 
-//OrderBook generate orderbook according ds bids, asks structure
-//size specific orderbook size.  -1 means use bids, asks size
+// OrderBook generate orderbook according ds bids, asks structure
+// size specific orderbook size.  -1 means use bids, asks size
 func (ds *MBPDepthDS) OrderBook(size int) *exchange.OrderBook {
 	var bidLen, askLen int
 	if size > ds.bids.Size() || size == -1 {

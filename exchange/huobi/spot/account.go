@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
 )
 
 type (
@@ -92,7 +92,7 @@ const (
 	TypeTrade              = "trade"
 )
 
-//Init spot account id for Balance request
+// Init spot account id for Balance request
 func (rc *RestClient) Init(ctx context.Context) error {
 	accounts, err := rc.Accounts(ctx)
 	if err != nil {

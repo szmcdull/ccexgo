@@ -14,9 +14,9 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/misc/request"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/misc/request"
 )
 
 type (

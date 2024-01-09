@@ -5,10 +5,10 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/misc/float"
 	"github.com/emirpasic/gods/trees/btree"
 	"github.com/emirpasic/gods/utils"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/misc/float"
 )
 
 type (

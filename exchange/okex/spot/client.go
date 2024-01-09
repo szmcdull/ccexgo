@@ -1,6 +1,6 @@
 package spot
 
-import "github.com/NadiaSama/ccexgo/exchange/okex"
+import "github.com/szmcdull/ccexgo/exchange/okex"
 
 type (
 	RestClient struct {

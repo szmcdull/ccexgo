@@ -12,9 +12,9 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/misc/request"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/misc/request"
 )
 
 type (
@@ -61,7 +61,7 @@ func (rc *RestClient) signature(param string) string {
 	return fmt.Sprintf("%x", h.Sum(nil))
 }
 
-//GetRequest helper method to send http GET request
+// GetRequest helper method to send http GET request
 func (rc *RestClient) GetRequest(ctx context.Context, endPoint string, req GetRestReq, sign bool, dst interface{}) error {
 	values, err := req.Values()
 	if err != nil {

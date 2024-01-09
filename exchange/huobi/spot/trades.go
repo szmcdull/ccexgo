@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/misc/tconv"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/misc/tconv"
 )
 
 type (

@@ -8,10 +8,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/exchange/okex"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange/okex"
 )
 
 const (
@@ -71,7 +71,7 @@ func (rc *RestClient) Symbols(ctx context.Context) ([]exchange.FuturesSymbol, er
 	return ret, nil
 }
 
-//RawSymbols return okex future symbols
+// RawSymbols return okex future symbols
 func (rc *RestClient) RawSymbols(ctx context.Context) ([]OkexSymbol, error) {
 	var symbols []OkexSymbol
 	if err := rc.Request(ctx, http.MethodGet, apiRawSymbolURI, nil, nil, false, &symbols); err != nil {
@@ -102,7 +102,7 @@ func (s *Symbol) String() string {
 	return fmt.Sprintf("%s-%s", s.Index(), st.Format("060102"))
 }
 
-//Init start a background goroutine which used to update symbol map
+// Init start a background goroutine which used to update symbol map
 func Init(ctx context.Context) error {
 	if err := updateSymbolMap(ctx); err != nil {
 		return err

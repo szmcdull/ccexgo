@@ -5,11 +5,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/internal/rpc"
-	"github.com/NadiaSama/ccexgo/misc/ctxlog"
 	"github.com/go-kit/log/level"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/internal/rpc"
+	"github.com/szmcdull/ccexgo/misc/ctxlog"
 )
 
 type (

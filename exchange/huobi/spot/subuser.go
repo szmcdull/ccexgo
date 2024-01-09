@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/NadiaSama/ccexgo/exchange"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange"
 )
 
 type (

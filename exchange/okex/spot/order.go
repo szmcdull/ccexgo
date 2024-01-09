@@ -9,10 +9,10 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/exchange/okex"
 	"github.com/pkg/errors"
 	"github.com/shopspring/decimal"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange/okex"
 )
 
 type (
@@ -82,7 +82,7 @@ var (
 	}
 )
 
-//CreateOrder create a spot order
+// CreateOrder create a spot order
 func (rc *RestClient) CreateOrder(ctx context.Context, req *exchange.OrderRequest, options ...exchange.OrderReqOption) (*exchange.Order, error) {
 	op := OrderParam{
 		InstrumentID: req.Symbol.String(),

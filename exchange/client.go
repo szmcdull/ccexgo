@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/NadiaSama/ccexgo/internal/rpc"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 )
 
 type (
@@ -24,7 +24,7 @@ type (
 	}
 )
 
-//NewClient got a new client instance
+// NewClient got a new client instance
 func NewClient(cb ConnCB, addr, key, secret string, timeout time.Duration) *Client {
 	return &Client{
 		NewConn: cb,
@@ -36,7 +36,7 @@ func NewClient(cb ConnCB, addr, key, secret string, timeout time.Duration) *Clie
 	}
 }
 
-//Run create wsconn and start conn running loop
+// Run create wsconn and start conn running loop
 func (c *Client) Run(ctx context.Context) error {
 	conn, err := c.NewConn(c.Addr)
 	if err != nil {
@@ -47,17 +47,17 @@ func (c *Client) Run(ctx context.Context) error {
 	return nil
 }
 
-//Done get notify if running loop closed
+// Done get notify if running loop closed
 func (c *Client) Done() <-chan struct{} {
 	return c.Conn.Done()
 }
 
-//Error return error if running loop closed due to error
+// Error return error if running loop closed due to error
 func (c *Client) Error() error {
 	return c.Conn.Error()
 }
 
-//Close the running loop
+// Close the running loop
 func (c *Client) Close() error {
 	return c.Conn.Close()
 }

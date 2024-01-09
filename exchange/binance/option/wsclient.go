@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/exchange/binance"
-	"github.com/NadiaSama/ccexgo/internal/rpc"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange/binance"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 )
 
 type (
@@ -17,7 +17,7 @@ type (
 	}
 )
 
-//NewTestWSClient return a wsclient which connect to binance option testnet
+// NewTestWSClient return a wsclient which connect to binance option testnet
 func NewTestWSClient(data chan interface{}, key, secret string) *WSClient {
 	ret := &WSClient{
 		data: data,

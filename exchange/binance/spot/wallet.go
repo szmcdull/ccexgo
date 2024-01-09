@@ -3,8 +3,8 @@ package spot
 import (
 	"context"
 
-	"github.com/NadiaSama/ccexgo/exchange/binance"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange/binance"
 )
 
 type (

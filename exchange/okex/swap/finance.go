@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/exchange/okex"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange/okex"
 )
 
 func (rc *RestClient) Ledgers(ctx context.Context, instrumentID string, before, after, limit, typ string) ([]okex.Ledger, error) {

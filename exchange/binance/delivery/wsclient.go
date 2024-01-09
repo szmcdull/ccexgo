@@ -1,6 +1,6 @@
 package delivery
 
-import "github.com/NadiaSama/ccexgo/exchange/binance"
+import "github.com/szmcdull/ccexgo/exchange/binance"
 
 type (
 	WSClient struct {

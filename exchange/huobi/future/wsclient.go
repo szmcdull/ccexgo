@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/NadiaSama/ccexgo/exchange"
-	"github.com/NadiaSama/ccexgo/exchange/huobi"
-	"github.com/NadiaSama/ccexgo/internal/rpc"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/exchange"
+	"github.com/szmcdull/ccexgo/exchange/huobi"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 )
 
 type (

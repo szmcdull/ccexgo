@@ -3,8 +3,8 @@ package okex5
 import (
 	"encoding/json"
 
-	"github.com/NadiaSama/ccexgo/internal/rpc"
 	"github.com/pkg/errors"
+	"github.com/szmcdull/ccexgo/internal/rpc"
 )
 
 type (
