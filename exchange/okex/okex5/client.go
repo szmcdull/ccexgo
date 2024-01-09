@@ -56,7 +56,7 @@ func NewTestRestClient(key, secret, pass string) *RestClient {
 	}
 }
 
-//Request do okexv5 rest request. response data field will be store into dst
+// Request do okexv5 rest request. response data field will be store into dst
 func (rc *RestClient) Request(ctx context.Context, method string, endPoint string, params url.Values, body io.Reader, sign bool, dst interface{}) error {
 	resp := RestResponse{
 		Data: dst,
@@ -67,7 +67,7 @@ func (rc *RestClient) Request(ctx context.Context, method string, endPoint strin
 	}
 
 	if resp.Code != "0" {
-		return errors.Errorf("request: %s fail code: %s msg: %s", endPoint, resp.Code, resp.Msg)
+		return errors.Errorf("request: %s fail code: %s msg: %s, data: %+v", endPoint, resp.Code, resp.Msg, resp.Data)
 	}
 
 	return nil
